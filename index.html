@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini for Recruiters &amp; Sourcers: From Intake to Search Strategy</title>
+  <meta name="description" content="Turn messy intake notes and vague feedback into a clear, sourcing-ready search strategy using Gemini in Google Workspace.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%234285f4'/%3E%3Cstop offset='.55' stop-color='%239168d6'/%3E%3Cstop offset='1' stop-color='%23d96570'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M16 7c.6 4 1.9 5.3 5.9 5.9C17.9 13.5 16.6 14.8 16 18.8 15.4 14.8 14.1 13.5 10.1 12.9 14.1 12.3 15.4 11 16 7Z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+
+<header class="bx-top">
+  <div class="bx-top-inner">
+    <button class="bx-menu" id="bxMenu" aria-label="Open step map" aria-expanded="false">
+      <span class="bx-menu-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      Step map
+    </button>
+    <div class="bx-brand">
+      <span class="bx-brand-mark" aria-hidden="true">✦</span>
+      <span class="bx-brand-name">Gemini for Recruiters</span>
+      <span class="bx-brand-sub">Intake to Search</span>
+    </div>
+    <button class="bx-reset" id="bxReset" type="button">Reset</button>
+  </div>
+  <div class="bx-progress" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <div class="bx-progress-fill" id="bxProgressFill"></div>
+  </div>
+  <div class="bx-progress-meta"><span id="bxProgressText">0% complete</span></div>
+</header>
+
+<div class="bx-drawer-backdrop" id="bxBackdrop" hidden></div>
+<nav class="bx-drawer" id="bxDrawer" aria-label="Step map">
+  <div class="bx-drawer-title">Step map</div>
+  <ul class="bx-nav" id="bxNav"></ul>
+</nav>
+
+<main class="bx-main" id="bxMain">
+
+<!-- ===================== 0 · INTRO ===================== -->
+<section class="bx-view is-on" id="v0" data-step="0">
+  <div class="bx-hero">
+    <span class="bx-eyebrow">Gemini for Recruiters &amp; Sourcers</span>
+    <h1 class="bx-hero-title">From Intake to <span class="bx-grad">Search Strategy</span></h1>
+    <p class="bx-hero-lead">Turn messy intake notes, vague job descriptions, and scattered hiring manager feedback into a clear, sourcing-ready search strategy using Gemini in Google Workspace.</p>
+    <div class="bx-hero-cta">
+      <button class="bx-btn bx-btn-primary" data-go="1">Start the workflow →</button>
+      <span class="bx-hero-hint">8 steps. Progress is saved in your browser.</span>
+    </div>
+  </div>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">Why this matters</div>
+    <h3>The problem is rarely missing information</h3>
+    <p>Most recruiting teams do not struggle because they lack information. They struggle because the information they get is incomplete, inconsistent, and hard to turn into action.</p>
+    <p style="margin-top:10px">This guide shows you how to use Gemini to structure the signal, clarify the role, and build a practical search strategy you can actually work from.</p>
+  </div>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">What this guide will help you do</div>
+    <h3>By the end, you will be able to</h3>
+    <ul class="bx-list">
+      <li>clean messy intake notes</li>
+      <li>separate facts from assumptions</li>
+      <li>identify real must-haves</li>
+      <li>interpret hiring manager feedback correctly</li>
+      <li>define a target profile</li>
+      <li>create a sourcing-ready brief</li>
+      <li>make the whole process repeatable</li>
+    </ul>
+  </div>
+
+  <div class="bx-panel">
+    <div class="bx-panel-kicker">Final outcome</div>
+    <h2 class="bx-panel-title">A repeatable search workflow</h2>
+    <p class="bx-panel-text">A repeatable workflow for turning intake and feedback into a practical search strategy.</p>
+  </div>
+
+  <div class="bx-next"><button class="bx-btn bx-btn-primary" data-go="1">Step 1 →</button></div>
+</section>
+
+<!-- ===================== 1 · MESSY INTAKE ===================== -->
+<section class="bx-view" id="v1" data-step="1">
+  <div class="bx-step-pill">Step 1 of 8</div>
+  <h2 class="bx-h1">Start with the messy intake</h2>
+  <p class="bx-lead">Here is what you usually get.</p>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">Reality</div>
+    <h3>Rarely a clean, sourcing-ready brief</h3>
+    <p>What you usually get is a mix of:</p>
+    <ul class="bx-list">
+      <li>a job description that sounds polished but generic</li>
+      <li>rushed intake notes</li>
+      <li>hiring manager comments</li>
+      <li>internal assumptions</li>
+      <li>half-formed priorities</li>
+      <li>contradictions between what was written and what was actually said</li>
+    </ul>
+  </div>
+
+  <div class="bx-note">
+    <b>Reframe the goal</b>
+    <p>The goal is not to trust the intake at face value. The goal is to capture it as raw material. This is where the workflow starts.</p>
+  </div>
+
+  <div class="bx-prompt">
+    <div class="bx-prompt-head"><span>Example intake (copy this to follow along)</span>
+      <button class="bx-copy" type="button" aria-label="Copy">⧉ Copy</button></div>
+    <pre class="bx-code">"We need a senior product security person."
+"Must be hands-on, but also strategic."
+"Someone from a fast-moving startup would be ideal."
+"Big company experience could also work."
+"Needs to work closely with engineering."
+"This person should influence security culture."
+"We want strong communication skills."
+"Cloud background is important."
+"Ideally someone who has seen scale."
+"We don't want someone too compliance-heavy."</pre>
+  </div>
+
+  <div class="bx-note">
+    <b>Teaching point</b>
+    <p>At this stage, do not force clarity too early. First, collect the raw signal. Your job in Step 1 is to gather the notes, not to solve the role yet.</p>
+  </div>
+
+  <div class="bx-checks" data-step="1">
+    <div class="bx-checks-title">Tick what you did</div>
+    <label class="bx-check"><input type="checkbox" data-step="1"><span>Gathered the raw intake into one place</span></label>
+    <label class="bx-check"><input type="checkbox" data-step="1"><span>Did not try to solve the role yet</span></label>
+  </div>
+
+  <div class="bx-next"><button class="bx-btn bx-btn-primary" data-go="2">Step 2 →</button></div>
+</section>
+
+<!-- ===================== 2 · CLEAN THE SIGNAL ===================== -->
+<section class="bx-view" id="v2" data-step="2">
+  <div class="bx-step-pill">Step 2 of 8</div>
+  <h2 class="bx-h1">Clean the signal</h2>
+  <p class="bx-lead">Use Gemini to separate facts from noise.</p>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">The move</div>
+    <h3>Classify, do not rewrite</h3>
+    <p>Instead of asking Gemini to "rewrite the notes nicely," ask it to classify the information. You want it to separate confirmed facts, assumptions, ambiguous statements, contradictions, and open questions. That gives you a more honest starting point.</p>
+  </div>
+
+  <div class="bx-prompt">
+    <div class="bx-prompt-head"><span>Prompt</span>
+      <button class="bx-copy" type="button" aria-label="Copy">⧉ Copy</button></div>
+    <pre class="bx-code">I'm going to paste intake notes for a recruiting search. Please organize them
+into 5 sections:
+
+1. Confirmed facts
+2. Assumptions
+3. Ambiguous or vague statements
+4. Contradictions or tension points
+5. Open questions that need clarification
+
+Do not invent missing information. Keep the wording concise and practical.</pre>
+  </div>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">Example output</div>
+    <h3>What Gemini should produce</h3>
+    <ul class="bx-list bx-list-def">
+      <li><b>Confirmed</b> Senior role; works closely with engineering; cloud background important; wants hands-on</li>
+      <li><b>Assumptions</b> "Strategic" may mean influencing direction; "fast-moving startup" may signal pace tolerance</li>
+      <li><b>Ambiguous</b> "seen scale", "strong communication", "influence security culture"</li>
+      <li><b>Contradictions</b> Startup profile preferred, but big company experience also valued; hands-on vs strategic</li>
+      <li><b>Open questions</b> What cloud environment? Leadership influence vs technical ownership? What does "too compliance-heavy" exclude?</li>
+    </ul>
+  </div>
+
+  <div class="bx-note">
+    <b>Teaching point</b>
+    <p>Cleaning the signal is the difference between reacting to words and understanding the search.</p>
+  </div>
+
+  <div class="bx-checks" data-step="2">
+    <div class="bx-checks-title">Tick what you did</div>
+    <label class="bx-check"><input type="checkbox" data-step="2"><span>Ran the classify prompt in Gemini</span></label>
+    <label class="bx-check"><input type="checkbox" data-step="2"><span>Facts are separated from assumptions</span></label>
+  </div>
+
+  <div class="bx-next"><button class="bx-btn bx-btn-primary" data-go="3">Step 3 →</button></div>
+</section>
+
+<!-- ===================== 3 · MUST-HAVES ===================== -->
+<section class="bx-view" id="v3" data-step="3">
+  <div class="bx-step-pill">Step 3 of 8</div>
+  <h2 class="bx-h1">Extract the real must-haves</h2>
+  <p class="bx-lead">Stop treating the JD as truth.</p>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">The trap</div>
+    <h3>Not every line is a must-have</h3>
+    <p>Most roles contain real must-haves, useful but flexible preferences, generic filler, and signals that sound important but will not decide success. Your goal is to identify the 2 to 4 criteria that genuinely determine fit.</p>
+  </div>
+
+  <div class="bx-prompt">
+    <div class="bx-prompt-head"><span>Prompt</span>
+      <button class="bx-copy" type="button" aria-label="Copy">⧉ Copy</button></div>
+    <pre class="bx-code">Based on the intake notes below, identify:
+
+1. Real must-haves (max 4)
+2. Nice-to-haves
+3. Generic or low-signal requirements
+
+For each must-have, explain why it is likely to matter in the actual search.
+Be strict. Do not treat every preference as a must-have.</pre>
+  </div>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">Example output</div>
+    <h3>Strict separation</h3>
+    <ul class="bx-list bx-list-def">
+      <li><b>Must-haves</b> hands-on product/security experience; works directly with engineering; cloud security exposure; fast-moving environments</li>
+      <li><b>Nice-to-have</b> experience at scale; cross-functional communication; startup experience; big-company background if execution-oriented</li>
+      <li><b>Low-signal</b> "strategic", "strong communication skills", "influence culture"</li>
+    </ul>
+  </div>
+
+  <div class="bx-note">
+    <b>Teaching point</b>
+    <p>Must-haves should narrow the search. If your must-haves still describe half the market, they are not real must-haves.</p>
+  </div>
+
+  <div class="bx-checks" data-step="3">
+    <div class="bx-checks-title">Tick what you did</div>
+    <label class="bx-check"><input type="checkbox" data-step="3"><span>Identified 4 or fewer real must-haves</span></label>
+    <label class="bx-check"><input type="checkbox" data-step="3"><span>Each must-have actually narrows the search</span></label>
+  </div>
+
+  <div class="bx-next"><button class="bx-btn bx-btn-primary" data-go="4">Step 4 →</button></div>
+</section>
+
+<!-- ===================== 4 · TRANSLATE FEEDBACK ===================== -->
+<section class="bx-view" id="v4" data-step="4">
+  <div class="bx-step-pill">Step 4 of 8</div>
+  <h2 class="bx-h1">Translate feedback into sourcing implications</h2>
+  <p class="bx-lead">What this feedback actually changes.</p>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">The shift</div>
+    <h3>Summaries do not improve the search</h3>
+    <p>Feedback often arrives vague: "not senior enough", "too corporate", "we want someone more strategic". If you only summarize it, the search does not improve. Translate it into what to tighten, what to loosen, what to stop prioritizing, what to add, and what false positives to avoid.</p>
+  </div>
+
+  <div class="bx-prompt">
+    <div class="bx-prompt-head"><span>Example feedback (copy to try)</span>
+      <button class="bx-copy" type="button" aria-label="Copy">⧉ Copy</button></div>
+    <pre class="bx-code">"This person is strong technically, but feels too infrastructure-heavy."
+"We want someone closer to product."
+"Good background, but maybe too process-oriented."
+"We need more influence and judgment."</pre>
+  </div>
+
+  <div class="bx-prompt">
+    <div class="bx-prompt-head"><span>Prompt</span>
+      <button class="bx-copy" type="button" aria-label="Copy">⧉ Copy</button></div>
+    <pre class="bx-code">Here is hiring manager feedback on candidate profiles. Translate it into sourcing
+implications using this format:
+
+1. What this really means
+2. What to tighten
+3. What to loosen
+4. What profile patterns to prioritize
+5. What profile patterns to avoid
+6. Updated search hypothesis
+
+Be practical. Focus on how the search should change.</pre>
+  </div>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">Example output</div>
+    <h3>Implications, not notes</h3>
+    <ul class="bx-list bx-list-def">
+      <li><b>Means</b> not a broad infrastructure profile; closer to product decisions and engineering collaboration</li>
+      <li><b>Tighten</b> product security exposure; proximity to product and application teams; judgment over process</li>
+      <li><b>Loosen</b> pedigree from large formal security orgs; heavy process/compliance emphasis</li>
+      <li><b>Prioritize</b> product security engineers; security architects with application focus</li>
+      <li><b>Avoid</b> infrastructure-only backgrounds; compliance-heavy or governance-heavy profiles</li>
+      <li><b>Hypothesis</b> product-facing security people who operate hands-on while influencing engineering and product</li>
+    </ul>
+  </div>
+
+  <div class="bx-note">
+    <b>Teaching point</b>
+    <p>Feedback should update the search logic, not just the notes.</p>
+  </div>
+
+  <div class="bx-checks" data-step="4">
+    <div class="bx-checks-title">Tick what you did</div>
+    <label class="bx-check"><input type="checkbox" data-step="4"><span>Turned feedback into tighten / loosen actions</span></label>
+    <label class="bx-check"><input type="checkbox" data-step="4"><span>Updated the search hypothesis</span></label>
+  </div>
+
+  <div class="bx-next"><button class="bx-btn bx-btn-primary" data-go="5">Step 5 →</button></div>
+</section>
+
+<!-- ===================== 5 · TARGET PROFILE ===================== -->
+<section class="bx-view" id="v5" data-step="5">
+  <div class="bx-step-pill">Step 5 of 8</div>
+  <h2 class="bx-h1">Build the target profile</h2>
+  <p class="bx-lead">Who you should actually search for.</p>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">Make it searchable</div>
+    <h3>A strong target profile answers</h3>
+    <ul class="bx-list">
+      <li>what titles are most likely relevant</li>
+      <li>what types of companies to target</li>
+      <li>what team setup this person likely comes from</li>
+      <li>what work signals matter</li>
+      <li>what false positives look close but are weak fits</li>
+    </ul>
+  </div>
+
+  <div class="bx-prompt">
+    <div class="bx-prompt-head"><span>Prompt</span>
+      <button class="bx-copy" type="button" aria-label="Copy">⧉ Copy</button></div>
+    <pre class="bx-code">Based on the intake notes and feedback, create a target candidate profile
+for sourcing. Include:
+
+1. likely current titles
+2. likely background
+3. likely company types
+4. strong work signals
+5. weak signals / false positives
+6. possible adjacent profiles worth testing
+
+Keep it practical and sourcing-oriented.</pre>
+  </div>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">Example output</div>
+    <h3>A searchable picture</h3>
+    <ul class="bx-list bx-list-def">
+      <li><b>Titles</b> Senior Product Security Engineer; Product Security Lead; Application Security Lead; Security Architect (product-facing)</li>
+      <li><b>Background</b> worked with engineering and product; secured applications or cloud-native systems; balances execution and influence</li>
+      <li><b>Companies</b> B2B SaaS; cloud-native product companies; high-growth, product-led orgs</li>
+      <li><b>Strong signals</b> built product security practices; embedded with engineering; influenced secure development</li>
+      <li><b>False positives</b> infra-heavy security without product exposure; governance/compliance-heavy; far from execution</li>
+      <li><b>Adjacent</b> senior application security engineers; platform security with product partnership</li>
+    </ul>
+  </div>
+
+  <div class="bx-note">
+    <b>Teaching point</b>
+    <p>The target profile should help you search better, not just describe the ideal person in abstract terms.</p>
+  </div>
+
+  <div class="bx-checks" data-step="5">
+    <div class="bx-checks-title">Tick what you did</div>
+    <label class="bx-check"><input type="checkbox" data-step="5"><span>Listed likely titles and company types</span></label>
+    <label class="bx-check"><input type="checkbox" data-step="5"><span>Named the false positives to avoid</span></label>
+  </div>
+
+  <div class="bx-next"><button class="bx-btn bx-btn-primary" data-go="6">Step 6 →</button></div>
+</section>
+
+<!-- ===================== 6 · SOURCING BRIEF ===================== -->
+<section class="bx-view" id="v6" data-step="6">
+  <div class="bx-step-pill">Step 6 of 8</div>
+  <h2 class="bx-h1">Produce the sourcing brief</h2>
+  <p class="bx-lead">A usable output for real search work.</p>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">Operational output</div>
+    <h3>A working search document</h3>
+    <p>This is where the workflow becomes operational. The brief should be more than a cleaned-up summary. It should help you or your team act immediately.</p>
+  </div>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">Recommended structure</div>
+    <h3>Thirteen sections</h3>
+    <ul class="bx-list">
+      <li>Role Summary, Confirmed Facts, Real Must-Haves, Nice-to-Haves</li>
+      <li>Target Profile, Strong Signals, Weak Signals / False Positives</li>
+      <li>Company Clusters to Search, Company Types to Avoid</li>
+      <li>Search Terms, Outreach Angle, Calibration Risks</li>
+      <li>Recommended First Search Strategy</li>
+    </ul>
+  </div>
+
+  <div class="bx-prompt">
+    <div class="bx-prompt-head"><span>Prompt</span>
+      <button class="bx-copy" type="button" aria-label="Copy">⧉ Copy</button></div>
+    <pre class="bx-code">Turn the analysis into a sourcing-ready search brief. Use the following
+sections:
+
+1. Role Summary
+2. Confirmed Facts
+3. Real Must-Haves
+4. Nice-to-Haves
+5. Target Profile
+6. Strong Signals
+7. Weak Signals / False Positives
+8. Company Clusters to Search
+9. Company Types to Avoid
+10. Search Terms
+11. Outreach Angle
+12. Calibration Risks
+13. Recommended First Search Strategy
+
+Keep it concise, practical, and directly usable by a recruiter or sourcer.</pre>
+  </div>
+
+  <div class="bx-note">
+    <b>Teaching point</b>
+    <p>If the output does not help someone start searching, it is not a real sourcing brief yet.</p>
+  </div>
+
+  <div class="bx-checks" data-step="6">
+    <div class="bx-checks-title">Tick what you did</div>
+    <label class="bx-check"><input type="checkbox" data-step="6"><span>Generated the full sourcing brief</span></label>
+    <label class="bx-check"><input type="checkbox" data-step="6"><span>It includes search terms and a first search strategy</span></label>
+  </div>
+
+  <div class="bx-next"><button class="bx-btn bx-btn-primary" data-go="7">Step 7 →</button></div>
+</section>
+
+<!-- ===================== 7 · REPEATABLE ===================== -->
+<section class="bx-view" id="v7" data-step="7">
+  <div class="bx-step-pill">Step 7 of 8</div>
+  <h2 class="bx-h1">Make it repeatable</h2>
+  <p class="bx-lead">Turn this into your standard workflow.</p>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">The real value</div>
+    <h3>Standardize what works</h3>
+    <p>The value is not doing this once. It is turning it into a repeatable operating system. Create a repeatable intake format, a reusable prompt structure, a standard output template, a review checklist, and a home for it in Google Docs or Drive.</p>
+  </div>
+
+  <div class="bx-split bx-split-2">
+    <article class="bx-mini bx-mini-flat">
+      <h3>Input</h3>
+      <ul class="bx-list"><li>intake notes</li><li>JD</li><li>hiring manager feedback</li><li>internal comments</li></ul>
+    </article>
+    <article class="bx-mini bx-mini-flat">
+      <h3>Processing</h3>
+      <ul class="bx-list"><li>clean the signal</li><li>identify must-haves</li><li>translate feedback</li><li>define target profile</li><li>generate sourcing brief</li></ul>
+    </article>
+  </div>
+
+  <div class="bx-prompt">
+    <div class="bx-prompt-head"><span>Reusable prompt starter</span>
+      <button class="bx-copy" type="button" aria-label="Copy">⧉ Copy</button></div>
+    <pre class="bx-code">I'm going to give you recruiting intake materials. Your job is to help me turn
+them into a sourcing-ready search brief. Follow this workflow:
+
+1. Separate facts from assumptions
+2. Identify real must-haves vs nice-to-haves
+3. Translate feedback into sourcing implications
+4. Build a target candidate profile
+5. Produce a concise sourcing brief
+
+Do not invent missing information. Be specific, practical, and structured for
+real recruiting use.</pre>
+  </div>
+
+  <div class="bx-note">
+    <b>Teaching point</b>
+    <p>A repeatable workflow is what saves time. Otherwise you are prompting from scratch every time.</p>
+  </div>
+
+  <div class="bx-checks" data-step="7">
+    <div class="bx-checks-title">Tick what you did</div>
+    <label class="bx-check"><input type="checkbox" data-step="7"><span>Saved the reusable prompt where the team can find it</span></label>
+  </div>
+
+  <div class="bx-next"><button class="bx-btn bx-btn-primary" data-go="8">Step 8 →</button></div>
+</section>
+
+<!-- ===================== 8 · BUILD THE GEM ===================== -->
+<section class="bx-view" id="v8" data-step="8">
+  <div class="bx-step-pill">Step 8 of 8</div>
+  <h2 class="bx-h1">Turn the workflow into a Gem</h2>
+  <p class="bx-lead">Do not rebuild the process every time.</p>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">Why a Gem</div>
+    <h3>Save the workflow, reuse it on every role</h3>
+    <p>If you re-explain the same recruiting workflow every time, you do not have a real system yet. A Gem lets you save the workflow logic and reuse it whenever a new role, a new intake, or new feedback comes in. One recruiting Gem that knows how to clean intake, separate facts from assumptions, find must-haves, interpret feedback, build a target profile, and produce a sourcing-ready brief.</p>
+  </div>
+
+  <div class="bx-note">
+    <b>The distinction</b>
+    <p>A workflow is the process. A Gem is the reusable wrapper for that process.</p>
+  </div>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">1 · What the Gem should do</div>
+    <h3>A recruiting workflow assistant</h3>
+    <p>Its job is not to rewrite the notes nicely. Its job is to turn messy recruiting materials into a practical, sourcing-ready search strategy. It should help with:</p>
+    <ul class="bx-list">
+      <li>role intake analysis</li>
+      <li>search calibration</li>
+      <li>hiring manager feedback interpretation</li>
+      <li>target profile definition</li>
+      <li>sourcing brief creation</li>
+    </ul>
+  </div>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">Name and description</div>
+    <h3>Recruiting Intake-to-Search Strategist</h3>
+    <p>Description: Transforms messy recruiting intake materials into a sourcing-ready search strategy for recruiters and sourcers.</p>
+  </div>
+
+  <div class="bx-prompt">
+    <div class="bx-prompt-head"><span>Gem instructions (paste into your Gem)</span>
+      <button class="bx-copy" type="button" aria-label="Copy">⧉ Copy</button></div>
+    <pre class="bx-code">You are a recruiting and sourcing workflow assistant.
+
+Your role is to help recruiters and sourcers turn messy intake materials into a clear, sourcing-ready search strategy.
+
+You may receive:
+- job descriptions
+- intake notes
+- hiring manager notes
+- hiring manager feedback
+- internal recruiting comments
+- market notes
+- candidate profile reactions
+
+Your job is not to rewrite the input nicely.
+Your job is to structure the signal, identify what matters, and turn the material into practical recruiting output.
+
+Always follow this workflow:
+
+Step 1: Clean the signal
+Separate the input into:
+- Confirmed facts
+- Assumptions
+- Ambiguous or vague statements
+- Contradictions or tension points
+- Open questions
+
+Step 2: Extract the real must-haves
+Identify:
+- Real must-haves (maximum 2 to 4)
+- Nice-to-haves
+- Generic or low-signal requirements
+Be strict. Do not treat every preference as a must-have.
+
+Step 3: Translate feedback into sourcing implications
+If feedback is provided, explain:
+- What this really means
+- What to tighten
+- What to loosen
+- What profile patterns to prioritize
+- What profile patterns to avoid
+- Updated search hypothesis
+
+Step 4: Build the target profile
+Create a sourcing-oriented target profile that includes:
+- Likely current titles
+- Likely background
+- Likely company types
+- Strong work signals
+- Weak signals / false positives
+- Adjacent profiles worth testing
+
+Step 5: Produce the sourcing brief
+Always return a final sourcing-ready brief using this structure:
+# Role Summary
+## Confirmed Facts
+## Real Must-Haves
+## Nice-to-Haves
+## Target Profile
+## Strong Signals
+## Weak Signals / False Positives
+## Company Clusters to Search
+## Company Types to Avoid
+## Search Terms
+## Outreach Angle
+## Calibration Risks
+## Recommended First Search Strategy
+
+Rules:
+- Do not invent missing information.
+- If something is unclear, label it as an open question or assumption.
+- Treat job descriptions as inputs, not as truth.
+- Optimize for practical recruiting and sourcing use, not polished generic writing.
+- Keep outputs concise, structured, and directly usable.
+- If the input is too vague, say so clearly.
+- If feedback contradicts the original role direction, point it out explicitly.
+- Separate facts, assumptions, risks, and recommendations whenever useful.
+
+Your output should help a recruiter or sourcer act immediately.
+If the result is too generic to guide a real search, improve specificity.</pre>
+  </div>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">How to create it in Gemini</div>
+    <h3>Seven clicks</h3>
+    <ol class="bx-steps">
+      <li><b>Open Gemini</b><span>Sign in to your Google account in the browser.</span></li>
+      <li><b>Find Gems</b><span>In the left panel, look for Gems or Gem Manager.</span></li>
+      <li><b>New Gem</b><span>Click New Gem or the custom Gem option.</span></li>
+      <li><b>Name it</b><span>Recruiting Intake-to-Search Strategist</span></li>
+      <li><b>Add the description</b><span>Paste the one-line description above.</span></li>
+      <li><b>Paste the instructions</b><span>Copy the instruction block and paste it into the instructions field.</span></li>
+      <li><b>Save</b><span>Now you have a reusable recruiting workflow.</span></li>
+    </ol>
+  </div>
+
+  <div class="bx-note">
+    <b>Do not see Gems? Use it manually</b>
+    <p>If Gems are not visible in your account, save the instructions in a Google Doc, keep a reusable input template and output structure, and paste the workflow into Gemini whenever you need it. That is a manual Gem until the feature reaches your account.</p>
+  </div>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">2 · Input format it expects</div>
+    <h3>Use the same input structure every time</h3>
+    <p>A Gem works much better when the input is structured.</p>
+  </div>
+
+  <div class="bx-prompt">
+    <div class="bx-prompt-head"><span>Standard input template</span>
+      <button class="bx-copy" type="button" aria-label="Copy">⧉ Copy</button></div>
+    <pre class="bx-code">Role Title:
+Company / Hiring Manager:
+Location:
+Work Model:
+
+Job Description:
+[Paste here]
+
+Intake Notes:
+[Paste here]
+
+Hiring Manager Comments:
+[Paste here]
+
+Recent Feedback on Profiles:
+[Paste here]
+
+Known Constraints:
+[Paste here]
+
+Open Questions:
+[Paste here]</pre>
+  </div>
+
+  <div class="bx-prompt">
+    <div class="bx-prompt-head"><span>Starter message to send with the Gem</span>
+      <button class="bx-copy" type="button" aria-label="Copy">⧉ Copy</button></div>
+    <pre class="bx-code">Use the workflow and turn the following recruiting materials into a
+sourcing-ready search strategy.
+
+Please:
+1. Clean the signal
+2. Identify real must-haves vs nice-to-haves
+3. Translate any feedback into sourcing implications
+4. Build the target profile
+5. Produce the final sourcing brief
+
+Here are the materials:
+
+[Paste input template here]</pre>
+  </div>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">3 · Output it always returns</div>
+    <h3>A fixed sourcing-brief structure</h3>
+    <p>The instructions force the Gem to always end with the same brief, so every run is consistent:</p>
+    <ul class="bx-list">
+      <li>Role Summary, Confirmed Facts, Real Must-Haves, Nice-to-Haves</li>
+      <li>Target Profile, Strong Signals, Weak Signals / False Positives</li>
+      <li>Company Clusters to Search, Company Types to Avoid</li>
+      <li>Search Terms, Outreach Angle, Calibration Risks</li>
+      <li>Recommended First Search Strategy</li>
+    </ul>
+  </div>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">4 · How to review whether it worked</div>
+    <h3>Quick review checklist</h3>
+    <ul class="bx-list">
+      <li>Did it separate facts from assumptions?</li>
+      <li>Are the must-haves truly selective?</li>
+      <li>Did it flag what is vague or contradictory?</li>
+      <li>Did feedback actually change the strategy?</li>
+      <li>Is the target profile searchable?</li>
+      <li>Are false positives clearly defined?</li>
+      <li>Could a sourcer start working from this brief immediately?</li>
+    </ul>
+    <p style="margin-top:10px">If not, refine the input or ask the Gem to tighten the output.</p>
+  </div>
+
+  <div class="bx-note">
+    <b>What you have built</b>
+    <p>More than a one-time prompt: one Gem, one input template, one output structure, and one review checklist. That is what makes the process reusable across roles, hiring managers, and searches.</p>
+  </div>
+
+  <div class="bx-checks" data-step="8">
+    <div class="bx-checks-title">Tick what you did</div>
+    <label class="bx-check"><input type="checkbox" data-step="8"><span>Created the Gem, or saved the instructions as a manual Gem</span></label>
+    <label class="bx-check"><input type="checkbox" data-step="8"><span>Ran it once with the input template and got a usable brief</span></label>
+  </div>
+
+  <div class="bx-next"><button class="bx-btn bx-btn-primary" data-go="9">Finish →</button></div>
+</section>
+
+<!-- ===================== 9 · FINAL ===================== -->
+<section class="bx-view" id="v9" data-step="9">
+  <div class="bx-step-pill">Wrap up</div>
+  <h2 class="bx-h1">You now have a real Gemini recruiting workflow</h2>
+  <p class="bx-lead">From scattered information to structured recruiting intelligence.</p>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">Use it when you need to</div>
+    <h3>Real moments this saves you</h3>
+    <ul class="bx-list">
+      <li>clarify a role</li>
+      <li>update a search after feedback</li>
+      <li>align on must-haves</li>
+      <li>define a target profile</li>
+      <li>build a sourcing brief faster and more consistently</li>
+    </ul>
+  </div>
+
+  <div class="bx-panel">
+    <div class="bx-panel-kicker">Final takeaway</div>
+    <h2 class="bx-panel-title">Structure the thinking</h2>
+    <p class="bx-panel-text">Gemini is most useful when it helps you structure thinking, sharpen the signal, and turn recruiting input into practical action.</p>
+  </div>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">Where to go next</div>
+    <h3>Pick one</h3>
+    <ul class="bx-list">
+      <li>Build your own version</li>
+      <li>Reuse the workflow template</li>
+      <li>Run it on a full example</li>
+      <li>Start with your next intake</li>
+    </ul>
+  </div>
+
+  <div class="bx-finish">
+    <button class="bx-btn bx-btn-primary" id="bxFinish" type="button">Done, mark all ✓</button>
+    <button class="bx-btn bx-btn-ghost" data-go="10">Common mistakes →</button>
+  </div>
+</section>
+
+<!-- ===================== 10 · BONUS: MISTAKES ===================== -->
+<section class="bx-view" id="v10" data-step="10">
+  <div class="bx-step-pill">Bonus</div>
+  <h2 class="bx-h1">Common mistakes to avoid</h2>
+  <p class="bx-lead">Five ways this workflow goes wrong.</p>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">1</div><h3>Treating the JD as the truth</h3>
+    <p>The JD is usually a starting point, not a sourcing strategy.</p>
+  </div>
+  <div class="bx-card">
+    <div class="bx-card-kicker">2</div><h3>Asking Gemini to "improve the notes"</h3>
+    <p>That often creates cleaner text, but not better search logic.</p>
+  </div>
+  <div class="bx-card">
+    <div class="bx-card-kicker">3</div><h3>Turning every preference into a must-have</h3>
+    <p>This makes the search unrealistic and unfocused.</p>
+  </div>
+  <div class="bx-card">
+    <div class="bx-card-kicker">4</div><h3>Summarizing feedback without changing the search</h3>
+    <p>Feedback should change priorities, not just wording.</p>
+  </div>
+  <div class="bx-card">
+    <div class="bx-card-kicker">5</div><h3>Accepting polished output without checking usefulness</h3>
+    <p>A sourcing brief should help you search, calibrate, and act.</p>
+  </div>
+
+  <div class="bx-next"><button class="bx-btn bx-btn-primary" data-go="11">What good output looks like →</button></div>
+</section>
+
+<!-- ===================== 11 · BONUS: GOOD OUTPUT ===================== -->
+<section class="bx-view" id="v11" data-step="11">
+  <div class="bx-step-pill">Bonus</div>
+  <h2 class="bx-h1">How to judge whether the output is good</h2>
+  <p class="bx-lead">A quick quality bar before you trust it.</p>
+
+  <div class="bx-card">
+    <div class="bx-card-kicker">A strong output should</div>
+    <h3>Pass all of these</h3>
+    <ul class="bx-list">
+      <li>separate facts from assumptions</li>
+      <li>reduce ambiguity</li>
+      <li>narrow the role meaningfully</li>
+      <li>clarify who to search for</li>
+      <li>identify false positives</li>
+      <li>provide a practical first search direction</li>
+      <li>feel usable by a recruiter or sourcer immediately</li>
+    </ul>
+  </div>
+
+  <div class="bx-note">
+    <b>The test</b>
+    <p>If it still feels generic, the workflow is not done.</p>
+  </div>
+
+  <div class="bx-finish">
+    <button class="bx-btn bx-btn-primary" data-go="0">Back to start</button>
+  </div>
+</section>
+
+</main>
+
+<div class="bx-toast" id="bxToast" role="status" aria-live="polite"></div>
+
+<script src="app.js?v=1"></script>
+</body>
+</html>

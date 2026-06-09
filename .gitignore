@@ -1,0 +1,7 @@
+# Tooling / scratch
+.playwright-cli/
+.superpowers/
+
+# OS junk
+Thumbs.db
+.DS_Store
