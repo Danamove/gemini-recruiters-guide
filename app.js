@@ -94,13 +94,9 @@
 
   /* ---- progress (real: based on checklist completion) ---- */
   function updateProgress() {
-    var boxes = allCheckboxes();
-    var total = boxes.length;
-    var done = 0;
-    boxes.forEach(function (cb) {
-      if (isChecked(parseInt(cb.getAttribute("data-step"), 10), indexWithinStep(cb))) done++;
-    });
-    var pct = total ? Math.round((done / total) * 100) : 0;
+    var countable = STEPS.filter(function (s) { return s.id !== 0; });
+    var done = countable.filter(function (s) { return stepDone(s.id); }).length;
+    var pct = countable.length ? Math.round((done / countable.length) * 100) : 0;
     if (elFill) elFill.style.width = pct + "%";
     if (elPText) elPText.textContent = T.percentDone(pct);
     if (elProgressBar) elProgressBar.setAttribute("aria-valuenow", String(pct));
@@ -265,10 +261,10 @@
 
   /* ---- finish (mark all checklist items done) ---- */
   function finish() {
-    allCheckboxes().forEach(function (cb) {
-      cb.checked = true;
-      setChecked(cb.getAttribute("data-step"), indexWithinStep(cb), true);
+    STEPS.forEach(function (s) {
+      if (state.visited.indexOf(s.id) === -1) state.visited.push(s.id);
     });
+    save();
     updateProgress();
     renderNav();
     toast(T.finished);

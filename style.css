@@ -573,53 +573,6 @@ code {
 
 .bx-fineprint { font-size: 13px; color: var(--bx-ink-faint); margin-top: 12px; }
 
-/* ---------- Checklist ---------- */
-.bx-checks {
-  background: var(--bx-surface);
-  border: 1px dashed #d8d4ec;
-  border-radius: var(--bx-r);
-  padding: 18px;
-  margin: 22px 0 8px;
-}
-.bx-check {
-  display: flex;
-  align-items: flex-start;
-  gap: 11px;
-  padding: 8px 6px;
-  border-radius: 9px;
-  cursor: pointer;
-  font-size: 14.5px;
-  color: var(--bx-ink-soft);
-  transition: background .12s;
-}
-.bx-check:hover { background: var(--bx-violet-wash-2); }
-.bx-check input {
-  appearance: none;
-  -webkit-appearance: none;
-  flex: 0 0 20px;
-  height: 20px;
-  margin-top: 1px;
-  border: 2px solid #cbd0dd;
-  border-radius: 6px;
-  cursor: pointer;
-  position: relative;
-  transition: background .15s, border-color .15s;
-}
-.bx-check input:checked { background: var(--bx-violet); border-color: var(--bx-violet); }
-.bx-check input:checked::after {
-  content: "";
-  position: absolute;
-  inset-inline-start: 5px;
-  top: 1px;
-  width: 5px;
-  height: 10px;
-  border: solid #fff;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-.bx-check input:checked + span { color: var(--bx-ink); text-decoration: line-through; text-decoration-color: #c4b5fd; }
-.bx-check input:focus-visible { outline: 2px solid var(--bx-violet); outline-offset: 2px; }
-
 /* ---------- Next / finish ---------- */
 .bx-next { margin-top: 26px; }
 .bx-finish { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 12px; }
