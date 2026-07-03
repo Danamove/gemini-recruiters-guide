@@ -581,12 +581,6 @@ code {
   padding: 18px;
   margin: 22px 0 8px;
 }
-.bx-checks-title {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--bx-violet-deep);
-  margin-bottom: 10px;
-}
 .bx-check {
   display: flex;
   align-items: flex-start;

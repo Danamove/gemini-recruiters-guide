@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Source card for og-image.png. Render at exactly 1200x630:
+     playwright-cli open http://localhost:8000/og.html
+     playwright-cli run-code "async page => { await page.setViewportSize({width:1200,height:630}); await page.screenshot({path:'og-image.png'}); }" -->
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #10214d 0%, #1c3a8a 55%, #2952d8 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  .card { padding: 0 96px; width: 100%; }
+  .eyebrow {
+    display: inline-block;
+    font-size: 26px;
+    font-weight: 700;
+    color: #a9c3ff;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 30px;
+  }
+  h1 .grad {
+    background: linear-gradient(90deg, #8ab4f8, #c58af9, #f28b82);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .sub { font-size: 33px; color: #d6e2ff; line-height: 1.45; margin-bottom: 44px; max-width: 980px; }
+  .tags { display: flex; gap: 16px; }
+  .tag {
+    font-size: 26px;
+    font-weight: 600;
+    color: #eaf1ff;
+    background: rgba(255,255,255,.10);
+    border: 1px solid rgba(169,195,255,.5);
+    border-radius: 999px;
+    padding: 12px 28px;
+  }
+  .mark {
+    position: fixed;
+    left: 96px;
+    bottom: 52px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #8ab4f8;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <span class="eyebrow">Build-along guide</span>
+    <h1><span class="grad">Gemini</span> for Recruiters &amp; Sourcers</h1>
+    <p class="sub">Turn messy intake notes and vague feedback into a sourcing-ready search strategy.</p>
+    <div class="tags">
+      <span class="tag">8 short steps</span>
+      <span class="tag">Copy-ready prompts</span>
+      <span class="tag">Free</span>
+    </div>
+  </div>
+  <div class="mark">✦ danamove.github.io</div>
+</body>
+</html>

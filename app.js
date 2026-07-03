@@ -155,6 +155,13 @@
     if (state.visited.indexOf(id) === -1) state.visited.push(id);
     save();
 
+    // Keep the URL shareable: #vN mirrors the active step (no history spam).
+    if (window.history && history.replaceState) {
+      history.replaceState(null, "", id === 0
+        ? location.pathname + location.search
+        : "#v" + id);
+    }
+
     renderNav();
     updateProgress();
     window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
@@ -291,7 +298,9 @@
     wireCopy();
     renderNav();
     updateProgress();
-    go(state.step || 0);
+    // A #vN deep link wins over the saved step (shared links land on the right step).
+    var m = (location.hash || "").match(/^#v(\d+)$/);
+    go(m ? parseInt(m[1], 10) : (state.step || 0));
   }
 
   if (document.readyState === "loading") {
