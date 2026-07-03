@@ -17,11 +17,9 @@
     { id: 4, label: "Translate feedback" },
     { id: 5, label: "Target profile" },
     { id: 6, label: "Sourcing brief" },
-    { id: 7, label: "Make it repeatable" },
-    { id: 8, label: "Build the Gem" },
-    { id: 9, label: "Recap" },
-    { id: 10, label: "Bonus: Common mistakes" },
-    { id: 11, label: "Bonus: Good output" }
+    { id: 7, label: "Build the Gem" },
+    { id: 8, label: "Recap" },
+    { id: 9, label: "Bonus: Common mistakes" }
   ];
   var LAST = STEPS.length - 1;
   // EDIT THIS: a unique localStorage key for this guide (so guides do not collide).
